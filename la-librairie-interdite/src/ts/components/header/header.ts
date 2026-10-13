@@ -16,5 +16,3 @@ export async function Header(): Promise<HTMLElement> {
 
     return header;
 }
-
-Header()
