@@ -1,1 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=Inria+Serif:wght@300;400;700&display=swap');
 @import "tailwindcss";
+
+@theme {
+    --color-background: #050C14;
+    --color-text-primary: #FFDFBE;
+    --font-sans: "Inria Sans", sans-serif;
+    --font-serif: "Inria Serif", serif;
+}
+
+.cart-icon {
+    mask: url("/src/assets/images/panier.png") center / contain no-repeat;
+    -webkit-mask: url("/src/assets/images/panier.png") center / contain no-repeat;
+}
