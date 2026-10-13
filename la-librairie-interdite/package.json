@@ -1,0 +1,22 @@
+{
+  "name": "la-librairie-interdite",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "concurrently \"npm run dev:ts\" \"npm run dev:css\"",
+    "dev:ts": "tsc --watch",
+    "dev:css": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/css/style.css --watch",
+    "build": "tsc && npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/css/style.css --minify"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.3.3",
+    "concurrently": "^10.0.6",
+    "tailwindcss": "^4.3.3",
+    "typescript": "^7.0.2"
+  }
+}
