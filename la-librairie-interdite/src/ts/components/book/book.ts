@@ -15,5 +15,9 @@ export async function book(book:BookModel): Promise<HTMLElement> {
     if(rarity) rarity.textContent = book.rarity
     const imageHolder = element.querySelector<HTMLImageElement>(".image-holder")
     if(imageHolder) imageHolder.src = "/src/assets/images/" + book.image;
+    const bouttonBook = element.querySelector(".book-button")
+    bouttonBook?.addEventListener('click', function() {
+        console.log("Je suis le livre "+ book.isbn +" et jai ete cliquer")
+    })
     return element;
 }
