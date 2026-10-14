@@ -1,7 +1,6 @@
-import { book } from "../../components/book/book.js";
+import { ImageBook } from "../../components/image-book/image-book.js";
 import { BookModel } from "../../models/Book-Model.js";
-import { changeRoute } from "../../router.js";
-import { getBooks } from "../../services/BookService.js";
+
 export async function SingleBook(params?: object): Promise<HTMLElement> {
     console.log("Ouverture de ", params)
     if(params == undefined) {
@@ -20,5 +19,32 @@ export async function SingleBook(params?: object): Promise<HTMLElement> {
     if(rarity) rarity.textContent = book.rarity;
     const detail = page.querySelector(".detail");
     if (detail) detail.textContent = book.detail
+    const bookImage = page.querySelector(".book-image");
+    const generatedBookImage = await ImageBook(book.image);
+    if(bookImage) bookImage.appendChild(generatedBookImage);
+    const originalImage = page.querySelector<HTMLImageElement>(".orignal-image");
+    if(originalImage) originalImage.src = "/src/assets/images/" + book.image;
+    const selectedImage = page.querySelector(".selected-image")
+    if(selectedImage == null){
+        throw Error("Selected image cannot be null")
+    }
+    page.querySelector(".buttonBookImage")?.addEventListener("click", () => {
+        const copyGeneratedImage = generatedBookImage.cloneNode(true);
+        selectedImage.replaceChildren(copyGeneratedImage);
+        page.querySelector(".buttonBookImage")?.classList.add("selected")
+        page.querySelector(".buttonOriginalImage")?.classList.remove("selected")
+    });
+    page.querySelector(".buttonOriginalImage")?.addEventListener("click", () => {
+        const image = document.createElement("img");
+        image.classList.add("w-full", "h-full")
+        image.src = "/src/assets/images/" + book.image;
+        selectedImage.replaceChildren(image)
+        page.querySelector(".buttonOriginalImage")?.classList.add("selected")
+        page.querySelector(".buttonBookImage")?.classList.remove("selected")
+    });
+    const copyGeneratedImage = generatedBookImage.cloneNode(true);
+    selectedImage.replaceChildren(copyGeneratedImage);
+    page.querySelector(".buttonBookImage")?.classList.add("selected")
+    page.querySelector(".buttonOriginalImage")?.classList.remove("selected")
     return page;
 }

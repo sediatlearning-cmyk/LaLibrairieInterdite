@@ -1,10 +1,16 @@
 <h1>Displaying book</h1>
 <div class="flex w-fit h-fit">
     <div class="w-fit">
-        <img class="w-50 h-50" src="/src/assets/images/chateau.jpg"></img>
-        <img class="w-50 h-50" src="/src/assets/images/chateau.jpg"></img>
+        <button class="buttonBookImage block cursor-pointer">
+            <div class="book-image w-50 h-50"></div>
+        </button>
+        <button class="buttonOriginalImage block cursor-pointer">
+            <img class="orignal-image w-50 h-50" src="/src/assets/images/chateau.jpg"></img>
+        </button>
     </div>
-    <img class="w-100 h-100" src="/src/assets/images/chateau.jpg"></img>
+    <div class="selected-image w-100 h-100">
+        <img class="w-full h-full" src="/src/assets/images/chateau.jpg"></img>
+    </div>
     <div class="flex-1">
         <p class="title text-text-white text-4xl">Grimmoire des élements</p>
         <p class="rarity">Commun</p>
