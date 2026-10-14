@@ -1,5 +1,5 @@
 export interface BookModel {
-    id: number;
+    isbn: number;
     title: string;
     rarity: string;
     detail: string
