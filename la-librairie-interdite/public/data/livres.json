@@ -1,11 +1,13 @@
+
 [
   {
     "isbn": 1,
-    "title": "Le Grimoire des Éléments",
+    "title": "Grimoire des éléments",
     "category": "Sortilèges",
     "price": 149,
     "rarity": "Épique",
     "description": "Maîtriser les forces du feu, de l'eau, de l'air et de la terre.",
+    "detail": "Forgé à l'aube des premiers royaumes, ce grimoire renferme les secrets des quatre éléments primordiaux. Ses pages anciennes dévoilent des incantations capables de soulever les océans, d'invoquer des tempêtes, de faire trembler la terre et de commander aux flammes. Chaque chapitre propose des rituels et des techniques de maîtrise élémentaire, des premiers enchantements aux sortilèges les plus dévastateurs. Seuls les mages les plus déterminés parviendront à révéler son véritable pouvoir.",
     "image": "chateau.jpg"
   },
   {
@@ -15,6 +17,7 @@
     "price": 89,
     "rarity": "Rare",
     "description": "Un recueil de sorts anciens disparus depuis des siècles.",
+    "detail": "Découvert dans les ruines d'une bibliothèque ensevelie, cet ouvrage rassemble les connaissances perdues des anciens archimages. Il contient des formules mystérieuses, des enchantements oubliés et des rituels dont l'origine remonte à plusieurs millénaires. Certaines pages sont rédigées dans une langue magique disparue, tandis que d'autres révèlent des secrets capables de bouleverser les lois de la magie. Un trésor inestimable pour les érudits et les aventuriers.",
     "image": "dragon.jpg"
   },
   {
@@ -24,6 +27,7 @@
     "price": 179,
     "rarity": "Légendaire",
     "description": "Les secrets de la magie des ténèbres.",
+    "detail": "Nul ne connaît véritablement l'auteur de ce codex interdit. Ses pages, imprégnées d'une énergie obscure, enseignent l'art de manipuler les ombres, de dissimuler sa présence et de communiquer avec les esprits du royaume nocturne. On raconte que certains passages changent lorsque la lune disparaît du ciel. Réservé aux sorciers expérimentés, cet ouvrage promet une puissance extraordinaire, mais chaque sortilège pourrait exiger un prix inattendu.",
     "image": "chateau2.jpg"
   },
   {
@@ -33,6 +37,7 @@
     "price": 55,
     "rarity": "Commun",
     "description": "Les techniques pour tromper les sens.",
+    "detail": "Ce manuel constitue une introduction idéale à la magie des illusions. À travers des exercices progressifs, le lecteur apprend à modifier les apparences, créer des mirages, masquer des objets et produire des visions fascinantes. Les chapitres avancés explorent les illusions sonores et les enchantements capables de tromper plusieurs sens simultanément. Très apprécié des apprentis magiciens, cet ouvrage démontre que la ruse peut parfois surpasser la puissance brute.",
     "image": "dragon2.jpg"
   },
   {
@@ -42,6 +47,7 @@
     "price": 119,
     "rarity": "Épique",
     "description": "Des incantations puisées dans les volcans anciens.",
+    "detail": "Écrit par les derniers pyromanciens du royaume d'Ignaris, ce livre rassemble les secrets du feu éternel. Ses pages révèlent comment invoquer des flammes mystiques, façonner des armes ardentes et créer des barrières de chaleur infranchissables. Les rituels les plus puissants permettraient même de réveiller le cœur des volcans endormis. La légende raconte que l'encre de cet ouvrage a été mélangée aux cendres d'un phénix immortel.",
     "image": "flamme.jpg"
   },
   {
@@ -51,6 +57,7 @@
     "price": 129,
     "rarity": "Épique",
     "description": "Une encyclopédie illustrée des créatures légendaires.",
+    "detail": "Fruit de plusieurs décennies d'exploration, ce bestiaire recense les créatures les plus mystérieuses du monde connu et des territoires oubliés. Dragons ancestraux, griffons majestueux, esprits sylvestres et monstres abyssaux y sont décrits avec précision. Chaque chapitre présente leur habitat, leur comportement, leurs pouvoirs et les précautions nécessaires pour les approcher. Certaines illustrations enchantées sembleraient même s'animer sous la lumière de la lune.",
     "image": "magicienne.jpg"
   }
 ]

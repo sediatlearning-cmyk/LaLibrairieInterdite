@@ -14,7 +14,6 @@ export async function changeRoute(route: string, params?: object) {
 }
 
 async function display(){
-    console.log(currentParams);
     let content = document.getElementById("content");
     if(!content){
         console.error("Impossible de trouver l'element content");

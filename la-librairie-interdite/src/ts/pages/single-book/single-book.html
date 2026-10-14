@@ -1,13 +1,21 @@
-<h1 class="text-4xl font-serif m-auto w-fit">Nos Ouvrages</h1>
-<h2 class="text-sm text-text-white m-auto w-fit">Explorez notre collection</h2>
-<div class="flex w-full">
-    <div class="w-75 shrink-0 h-4">
-        <div>Catégorie</div>
-        <div class="text-text-grey"><input type="checkbox" /> Commun</div>
-        <div class="text-text-grey"><input type="checkbox" /> Rare</div>
-        <div class="text-text-grey"><input type="checkbox" /> Epique</div>
-        <div>Prix</div>
+<h1>Displaying book</h1>
+<div class="flex w-fit h-fit">
+    <div class="w-fit">
+        <img class="w-50 h-50" src="/src/assets/images/chateau.jpg"></img>
+        <img class="w-50 h-50" src="/src/assets/images/chateau.jpg"></img>
     </div>
-    <div class="flex-1 w-fit h-fit flex gap-5 flex-wrap" id="books">
+    <img class="w-100 h-100" src="/src/assets/images/chateau.jpg"></img>
+    <div class="flex-1">
+        <p class="title text-text-white text-4xl">Grimmoire des élements</p>
+        <p class="rarity">Commun</p>
+        <p class="detail text-text-grey">Un antique grimmoire détaillant la maitrise des quatres élements fondamentaux : feu, eau, terre et air</p>
+        <div class="flex gap-10">
+            <div class="border-text-primary border-2 w-fit h-10 my-auto flex items-center overflow-hidden">
+                <button type="button" class="bg-[#2e2e2e] h-full w-10 cursor-pointer">-</button>
+                <input type="number" id="quantite" name="quantite" min="1" max="10" value="1" class="w-12 text-center outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
+                <button type="button" class="bg-[#2e2e2e] h-full w-10 cursor-pointer">+</button>
+            </div>
+            <button class="bg-secondary-background text-black flex-auto rounded-xl h-12 cursor-pointer">AJOUTER AU PANIER</button>
+        </div>
     </div>
 </div>
