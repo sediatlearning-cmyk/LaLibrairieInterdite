@@ -1,9 +1,11 @@
 import { Home } from "./pages/home/home.js";
 import { SingleBook } from "./pages/single-book/single-book.js";
+import { Panier } from "./pages/panier/panier.js";
 
 const routes: Record<string, (params?: object) => Promise<HTMLElement>> = {
     "home": Home,
-    "singlebook": SingleBook
+    "singlebook": SingleBook,
+    "panier": Panier
 };
 let currentRoute:string = "home"
 let currentParams: object | undefined
