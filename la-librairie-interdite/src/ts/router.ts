@@ -1,9 +1,11 @@
 import { Home } from "./pages/home/home.js";
+import { Panier } from "./pages/panier/panier.js";
 
 const routes: Record<string, () => Promise<HTMLElement>> = {
     "home": Home,
+    "panier": Panier,
 };
-let currentRoute:string = "home"
+let currentRoute:string = "panier"
 
 async function display(){
     let content = document.getElementById("content");
