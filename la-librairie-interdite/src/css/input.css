@@ -4,6 +4,8 @@
 @theme {
     --color-background: #050C14;
     --color-text-primary: #FFDFBE;
+    --color-text-white: #FFFFFF;
+    --color-text-grey: rgb(207, 205, 205);
     --font-sans: "Inria Sans", sans-serif;
     --font-serif: "Inria Serif", serif;
 }
