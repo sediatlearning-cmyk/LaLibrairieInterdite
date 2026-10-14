@@ -7,3 +7,8 @@ export async function getBooks(): Promise<BookModel[]> {
 
     return await response.json() as BookModel[];
 }
+
+export async function getAllRarities(): Promise<string[]> {
+    const allBooks = await getBooks();
+    return [...new Set(allBooks.map(book => book.rarity))];
+}
