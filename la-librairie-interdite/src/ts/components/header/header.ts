@@ -1,5 +1,7 @@
+import { changeRoute } from "../../router.js";
+
 function shopping() {
-    alert("Ouverture du panier")
+    changeRoute("panier")
 }
 
 export async function Header(): Promise<HTMLElement> {
