@@ -1,0 +1,56 @@
+[
+  {
+    "isbn": 1,
+    "title": "Le Grimoire des Éléments",
+    "category": "Sortilèges",
+    "price": 149,
+    "rarity": "Épique",
+    "description": "Maîtriser les forces du feu, de l'eau, de l'air et de la terre.",
+    "image": "chateau.jpg"
+  },
+  {
+    "isbn": 2,
+    "title": "Les Arcanes Oubliées",
+    "category": "Sortilèges",
+    "price": 89,
+    "rarity": "Rare",
+    "description": "Un recueil de sorts anciens disparus depuis des siècles.",
+    "image": "dragon.jpg"
+  },
+  {
+    "isbn": 3,
+    "title": "Le Codex des Ombres",
+    "category": "Sortilèges",
+    "price": 179,
+    "rarity": "Légendaire",
+    "description": "Les secrets de la magie des ténèbres.",
+    "image": "chateau2.jpg"
+  },
+  {
+    "isbn": 4,
+    "title": "L'Art des Illusions",
+    "category": "Sortilèges",
+    "price": 55,
+    "rarity": "Commun",
+    "description": "Les techniques pour tromper les sens.",
+    "image": "dragon2.jpg"
+  },
+  {
+    "isbn": 5,
+    "title": "Le Livre des Flammes Éternelles",
+    "category": "Sortilèges",
+    "price": 119,
+    "rarity": "Épique",
+    "description": "Des incantations puisées dans les volcans anciens.",
+    "image": "flamme.jpg"
+  },
+  {
+    "isbn": 6,
+    "title": "Le Bestiaire des Créatures Oubliées",
+    "category": "Créatures",
+    "price": 129,
+    "rarity": "Épique",
+    "description": "Une encyclopédie illustrée des créatures légendaires.",
+    "image": "magicienne.jpg"
+  }
+]
