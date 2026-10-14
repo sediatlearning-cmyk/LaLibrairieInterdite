@@ -1,4 +1,5 @@
 import { BookModel } from "../../models/Book-Model";
+import { changeRoute } from "../../router.js";
 
 export async function book(book:BookModel): Promise<HTMLElement> {
     const response = await fetch("/src/ts/components/book/book.html");
@@ -10,7 +11,7 @@ export async function book(book:BookModel): Promise<HTMLElement> {
     const title = element.querySelector(".book-title");
     if (title) title.textContent = book.title;
     const price = element.querySelector(".price")
-    if(price) price.textContent = book.price.toString()
+    if(price) price.textContent = book.price.toString() + "€"
     const rarity = element.querySelector(".rarity")
     if(rarity) rarity.textContent = book.rarity
     const imageHolder = element.querySelector<HTMLImageElement>(".image-holder")
@@ -18,6 +19,7 @@ export async function book(book:BookModel): Promise<HTMLElement> {
     const bouttonBook = element.querySelector(".book-button")
     bouttonBook?.addEventListener('click', function() {
         console.log("Je suis le livre "+ book.isbn +" et jai ete cliquer")
+        changeRoute('singlebook', {id: 1})
     })
     return element;
 }

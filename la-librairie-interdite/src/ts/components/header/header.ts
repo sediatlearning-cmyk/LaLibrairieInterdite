@@ -3,7 +3,6 @@ function shopping() {
 }
 
 export async function Header(): Promise<HTMLElement> {
-    console.log("header")
     const response = await fetch("/src/ts/components/header/header.html");
     if (!response.ok) throw new Error("Impossible de charger le header");
 

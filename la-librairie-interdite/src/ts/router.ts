@@ -1,17 +1,35 @@
 import { Home } from "./pages/home/home.js";
+import { SingleBook } from "./pages/single-book/single-book.js";
 
-const routes: Record<string, () => Promise<HTMLElement>> = {
+const routes: Record<string, (params?: object) => Promise<HTMLElement>> = {
     "home": Home,
+    "singlebook": SingleBook
 };
 let currentRoute:string = "home"
+let currentParams: object | undefined
+export async function changeRoute(route: string, params?: object) {
+    currentRoute = route;
+    currentParams = params;
+    await display()
+}
 
 async function display(){
+    console.log(currentParams);
     let content = document.getElementById("content");
     if(!content){
         console.error("Impossible de trouver l'element content");
         return;
     }
-    const page: HTMLElement = await routes[currentRoute]();
+    if(routes[currentRoute] == null) {
+        console.error("cant find "+ currentRoute)
+        return;
+    }
+    let page: HTMLElement;
+    if(currentParams == undefined) {
+        page = await routes[currentRoute]();
+    } else {
+        page = await routes[currentRoute](currentParams);
+    }
     content.replaceChildren(page);
 }
 
