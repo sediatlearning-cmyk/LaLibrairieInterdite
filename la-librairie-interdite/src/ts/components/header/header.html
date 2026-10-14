@@ -4,8 +4,9 @@
             LA LIBRAIRIE INTERDITE
         </a>
         <div class="flex items-center gap-6">
-            <button id="cart-button" class="cursor-pointer" aria-label="Open cart">
-                <span class="cart-icon block w-8 h-8 bg-text-primary"></span>
+            <button id="cart-button" type="button" class="relative w-10 h-10 cursor-pointer group" aria-label="Ouvrir le panier">
+                <span class="cart-icon block w-full h-full bg-text-primary transition-transform duration-200 group-hover:scale-110"></span>
+                <span class="number-of-item absolute -top-2 -right-2 flex items-center justify-center min-w-5 h-5 px-1 rounded-full bg-red-700 text-white text-xs font-bold ring-2 ring-background shadow-md">5</span>
             </button>
         </div>
     </nav>

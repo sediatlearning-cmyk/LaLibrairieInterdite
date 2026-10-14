@@ -1,5 +1,6 @@
 import { ImageBook } from "../../components/image-book/image-book.js";
 import { BookModel } from "../../models/Book-Model.js";
+import { addToCart } from "../../services/CartService.js";
 
 export async function SingleBook(params?: object): Promise<HTMLElement> {
     console.log("Ouverture de ", params)
@@ -46,5 +47,10 @@ export async function SingleBook(params?: object): Promise<HTMLElement> {
     selectedImage.replaceChildren(copyGeneratedImage);
     page.querySelector(".buttonBookImage")?.classList.add("selected")
     page.querySelector(".buttonOriginalImage")?.classList.remove("selected")
+
+    const addToCartButton = page.querySelector(".add-to-cart");
+    addToCartButton?.addEventListener("click", () => {
+        addToCart(book, 1);
+    })
     return page;
 }
