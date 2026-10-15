@@ -23,10 +23,8 @@ export function updateQuantityCart(): void {
     const numberItemHtmlElement: HTMLElement|null = document.querySelector(".number-of-item");
     if(!numberItemHtmlElement) console.error("cant find number item html element")
     if(numberOfItemInCart == 0) {
-        console.log("invisible")
         numberItemHtmlElement?.classList.add("invisible")
     }else {
-        console.log("Removing")
         numberItemHtmlElement?.classList.remove("invisible")
     }
 

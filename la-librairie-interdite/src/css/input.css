@@ -11,6 +11,11 @@
     --font-serif: "Inria Serif", serif;
 }
 
+.delete-icon {
+    mask: url("/src/assets/images/effacer.png") center / contain no-repeat;
+    -webkit-mask: url("/src/assets/images/effacer.png") center / contain no-repeat;
+}
+
 .cart-icon {
     mask: url("/src/assets/images/panier.png") center / contain no-repeat;
     -webkit-mask: url("/src/assets/images/panier.png") center / contain no-repeat;
