@@ -7,9 +7,9 @@ export function addToCart(book: BookModel, quantity: number): void {
     const cart: Map<number, number> = getRawCart();
     if(quantity != 0) {
         cart.set(book.isbn, quantity)
-        updateQuantityCart()
     }
     saveRawCart(cart)
+    updateQuantityCart()
 }
 
 function saveRawCart(cart: Map<number, number>): void {
@@ -47,6 +47,7 @@ export function removeBookFromCart(book: BookModel): void {
     if(rawCart.has(book.isbn)) {
         rawCart.delete(book.isbn);
         saveRawCart(rawCart);
+        updateQuantityCart();
     }else {
         console.warn("Cannot delete a book that is not in the shopping cart");
     }
