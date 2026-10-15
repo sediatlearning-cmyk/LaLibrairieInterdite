@@ -14,7 +14,11 @@ export async function book(book:BookModel): Promise<HTMLElement> {
     const price = element.querySelector(".price")
     if(price) price.textContent = book.price.toString() + "€"
     const rarity = element.querySelector(".rarity")
-    if(rarity) rarity.textContent = book.rarity
+    if(rarity){ 
+        rarity.textContent = book.rarity
+        rarity.classList.add("rarity-"+book.rarity)
+    }
+
     const imageHolder = element.querySelector<HTMLImageElement>(".image-holder")
     const bookimage = await ImageBook(book.image)
     if(imageHolder) imageHolder.appendChild(bookimage);

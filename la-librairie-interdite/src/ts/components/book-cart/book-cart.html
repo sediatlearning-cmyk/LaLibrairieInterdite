@@ -1,16 +1,24 @@
-    <div class="book w-full h-fit flex items-center overflow-hidden border rounded-xl">
-        <div class="w-60 h-60 shrink-0 image-holder relative flex items-center justify-center"></div>
-        <div class="w-full">
-            <p class="book-title text-2xl">Grimoire des éléments</p>
-            <p class="price text-text-white">149€</p>
-        </div>
-        <div class="flex gap-5">
-            <div class="border-text-primary border-2 w-fit h-10 my-auto flex items-center overflow-hidden">
-                <button type="button" class="minus-button bg-[#2e2e2e] h-full w-10 cursor-pointer">-</button>
-                <input type="number" id="quantite" name="quantite" min="1" max="10" value="1" class="w-12 text-center outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
-                <button type="button" class="plus-button bg-[#2e2e2e] h-full w-10 cursor-pointer">+</button>
-            </div>
-            <div class="delete cursor-pointer delete-icon w-10 h-10 bg-text-primary"></div>
+
+<div class="book flex w-full flex-col items-center gap-5 rounded-xl border border-[#9B7138]/60 bg-[#07111B]/95 p-4 shadow-lg shadow-black/40 transition-all duration-300 hover:border-[#D8A75B] hover:shadow-[0_0_20px_rgba(216,167,91,0.12)] sm:flex-row">
+    <!-- Image du livre -->
+    <div class="image-holder relative flex h-40 w-40 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-[#101A24] sm:h-44 sm:w-44"></div>
+
+    <!-- Informations -->
+    <div class="flex min-w-0 flex-1 flex-col gap-3 text-center sm:text-left">
+        <p class="book-title font-serif text-2xl text-[#FFE2B5]">Grimoire des éléments</p>
+        <p class="price font-serif text-2xl text-white">149€</p>
+    </div>
+
+    <!-- Quantité et suppression -->
+    <div class="flex shrink-0 items-center gap-5">
+        <div class="flex h-11 w-fit items-center overflow-hidden rounded-lg border border-[#D8A75B] bg-[#0B1520]">
+            <button type="button" class="minus-button h-full w-10 cursor-pointer bg-[#1B2530] text-xl text-[#FFE2B5] transition hover:bg-[#34404D]">−</button>
+            <input type="number" id="quantite" name="quantite" min="1" max="10" value="1" class="w-12 bg-transparent text-center text-white outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
+            <button type="button" class="plus-button h-full w-10 cursor-pointer bg-[#1B2530] text-xl text-[#FFE2B5] transition hover:bg-[#34404D]">+</button>
         </div>
 
+        <button type="button" class="delete flex h-11 w-11 cursor-pointer items-center justify-center rounded-lg border border-red-900/60 bg-red-950/30 transition hover:border-red-500 hover:bg-red-900/40" aria-label="Supprimer le livre">
+            <span class="delete-icon block h-6 w-6 bg-[#FFB4A8]"></span>
+        </button>
     </div>
+</div>

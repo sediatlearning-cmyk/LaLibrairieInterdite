@@ -11,6 +11,10 @@
     --font-serif: "Inria Serif", serif;
 }
 
+input[type="checkbox"]:checked {
+  accent-color: #E9BB8A;
+}
+
 .delete-icon {
     mask: url("/src/assets/images/effacer.png") center / contain no-repeat;
     -webkit-mask: url("/src/assets/images/effacer.png") center / contain no-repeat;
@@ -35,7 +39,7 @@
     appearance: none;
     width: 16px;
     height: 16px;
-    background: #FFDFBE;
+    background: linear-gradient(135deg, #FFDFBE 0%, #E8BE91 50%, #C99660 100%);
     border-radius: 50%;
     cursor: pointer;
     pointer-events: auto;
@@ -44,8 +48,47 @@
 .price-range::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: #FFDFBE;
+    background: linear-gradient(135deg, #FFDFBE 0%, #E8BE91 50%, #C99660 100%);
     border-radius: 50%;
     cursor: pointer;
     pointer-events: auto;
+}
+
+body {
+    background-image: url("/src/assets/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
+
+.rarity.rarity-Peu-commun {
+    background-color: #22C55E30;
+    color: #22C55E;
+    border-color: #22C55E;
+}
+
+.rarity.rarity-Rare {
+    background-color: #3B82F630;
+    color: #3B82F6;
+    border-color: #3B82F6;
+}
+
+.rarity.rarity-Épique {
+    background-color: #A855F730;
+    color: #A855F7;
+    border-color: #A855F7;
+}
+
+.rarity.rarity-Légendaire {
+    background-color: #F59E0B30;
+    color: #F59E0B;
+    border-color: #F59E0B;
+}
+
+.rarity.rarity-Mythique {
+    background-color: #EF444430;
+    color: #EF4444;
+    border-color: #EF4444;
 }

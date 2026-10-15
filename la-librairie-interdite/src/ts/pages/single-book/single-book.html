@@ -1,27 +1,52 @@
-<h1>Displaying book</h1>
-<div class="flex w-fit h-fit">
-    <div class="w-fit">
-        <button class="buttonBookImage block cursor-pointer">
-            <div class="book-image w-50 h-50"></div>
-        </button>
-        <button class="buttonOriginalImage block cursor-pointer">
-            <img class="orignal-image w-50 h-50" src="/src/assets/images/chateau.jpg"></img>
-        </button>
-    </div>
-    <div class="selected-image w-100 h-100">
-        <img class="w-full h-full" src="/src/assets/images/chateau.jpg"></img>
-    </div>
-    <div class="flex-1">
-        <p class="title text-text-white text-4xl">Grimmoire des élements</p>
-        <p class="rarity">Commun</p>
-        <p class="detail text-text-grey">Un antique grimmoire détaillant la maitrise des quatres élements fondamentaux : feu, eau, terre et air</p>
-        <div class="flex gap-10">
-            <div class="border-text-primary border-2 w-fit h-10 my-auto flex items-center overflow-hidden">
-                <button type="button" class="minus-button bg-[#2e2e2e] h-full w-10 cursor-pointer">-</button>
-                <input type="number" id="quantite" name="quantite" min="1" max="10" value="1" class="w-12 text-center outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
-                <button type="button" class="plus-button bg-[#2e2e2e] h-full w-10 cursor-pointer">+</button>
+
+<section class="mx-auto w-full max-w-7xl px-6 py-10 text-text-white">
+    <h1 class="mb-10 text-center font-serif text-4xl text-text-primary">Détails de l'ouvrage</h1>
+
+    <div class="flex flex-col gap-10 rounded-2xl border border-[#9B7138]/50 bg-[#07111B]/90 p-8 shadow-2xl lg:flex-row">
+        <!-- Miniatures -->
+        <div class="flex shrink-0 flex-row gap-4 lg:flex-col">
+            <button class="buttonBookImage selected block cursor-pointer overflow-hidden rounded-lg border-2 border-transparent bg-[#101A24] transition-all hover:border-[#D8A75B]">
+                <div class="book-image h-28 w-28"></div>
+            </button>
+            <button class="buttonOriginalImage block cursor-pointer overflow-hidden rounded-lg border-2 border-transparent bg-[#101A24] transition-all hover:border-[#D8A75B]">
+                <img class="orignal-image h-28 w-28 object-cover" src="/src/assets/images/chateau.jpg" alt="Couverture originale">
+            </button>
+        </div>
+
+        <!-- Image principale -->
+        <div class="selected-image flex h-100 w-full shrink-0 items-center justify-center overflow-hidden rounded-xl border border-[#9B7138]/60 bg-background shadow-[0_0_30px_rgba(216,167,91,0.12)] lg:w-100">
+            <img class="h-full w-full object-contain" src="/src/assets/images/chateau.jpg" alt="Aperçu du livre">
+        </div>
+
+        <!-- Informations -->
+        <div class="flex min-w-0 flex-1 flex-col gap-6">
+            <div>
+                <p class="mb-2 text-sm tracking-[0.2em] text-[#D8A75B]">LA LIBRAIRIE INTERDITE</p>
+                <p class="title font-serif text-4xl leading-tight text-[#FFE2B5]">Grimoire des éléments</p>
             </div>
-            <button class="add-to-cart bg-secondary-background text-black flex-auto rounded-xl h-12 cursor-pointer">AJOUTER AU PANIER</button>
+
+            <p class="rarity w-fit rounded-full border border-gray-500/50 bg-gray-800/70 px-5 py-1.5 text-sm text-gray-200">Commun</p>
+
+            <div class="h-px w-full bg-linear-to-r from-[#D8A75B]/60 to-transparent"></div>
+
+            <p class="detail text-base leading-8 text-text-grey">
+                Un antique grimoire détaillant la maîtrise des quatre éléments fondamentaux : feu, eau, terre et air.
+            </p>
+
+            <div class="mt-auto flex flex-col gap-5">
+                <p class="price font-serif text-4xl text-[#FFE2B5]">149 €</p>
+
+                <div class="flex flex-wrap items-center gap-4">
+                    <div class="flex h-12 shrink-0 items-center overflow-hidden rounded-lg border border-[#D8A75B]">
+                        <button type="button" class="minus-button h-full w-11 cursor-pointer bg-[#1B2530] text-xl text-[#FFE2B5] transition hover:bg-[#34404D]">−</button>
+                        <input type="number" id="quantite" name="quantite" min="1" max="10" value="1" class="w-14 bg-transparent text-center text-white outline-none [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none">
+                        <button type="button" class="plus-button h-full w-11 cursor-pointer bg-[#1B2530] text-xl text-[#FFE2B5] transition hover:bg-[#34404D]">+</button>
+                    </div>
+                    <button class="add-to-cart h-12 min-w-50 flex-1 cursor-pointer rounded-lg border border-[#D8A75B] bg-[#D8A75B] px-6 font-serif text-base font-bold text-[#07111B] transition-all duration-300 hover:bg-[#FFE2B5] hover:shadow-[0_0_20px_rgba(216,167,91,0.35)]">
+                        AJOUTER AU PANIER
+                    </button>
+                </div>
+            </div>
         </div>
     </div>
-</div>
+</section>

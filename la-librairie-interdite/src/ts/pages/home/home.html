@@ -1,14 +1,29 @@
 <h1 class="text-4xl font-serif m-auto w-fit">Nos Ouvrages</h1>
-<h2 class="text-sm text-text-white m-auto w-fit">Explorez notre collection</h2>
-<div class="flex w-full">
-    <div class="w-75 shrink-0 h-4">
-        <div>Catégorie</div>
+<div class="flex items-center w-40 mx-auto">
+    <div class="flex-1 h-px bg-secondary-background"></div>
+    <span class="mx-3 text-secondary-background text-xl">✧</span>
+    <div class="flex-1 h-px bg-secondary-background"></div>
+</div>
+<h2 class="text-sm text-text-grey m-auto w-fit mb-10">Explorez notre collection et laissez la magie des récits vous emportez.</h2>
+<div class="flex w-full gap-20">
+    <div class="w-75 shrink-0 h-fit p-10 bg-background">
+        <div class="text-2xl">Filtres</div>
+        <hr class="border-t my-4">
+        <!-- Catégorie -->
+        <div class="text-xl">Catégorie</div>
         <div class="rarities">
         </div>
-        <div>Prix</div>
+        <!-- Séparateur -->
+        <div class="flex items-center w-full my-6">
+            <div class="flex-1 h-px bg-secondary-background"></div>
+            <span class="mx-3 text-secondary-background text-xl">✧</span>
+            <div class="flex-1 h-px bg-secondary-background"></div>
+        </div>
+        <!-- Prix -->
+        <div class="text-xl">Prix</div>
         <div class="relative h-6 w-full">
             <div class="absolute top-1/2 h-1 w-full -translate-y-1/2 rounded bg-gray-600"></div>
-            <div id="price-progress" class="absolute top-1/2 h-1 -translate-y-1/2 bg-amber-500"></div>
+            <div id="price-progress" class="absolute top-1/2 h-1 -translate-y-1/2 bg-linear-to-r from-text-primary via-[#E8BE91] to-[#C99660]"></div>
 
             <input type="range" id="min-price" min="0" max="200" value="20" class="price-range absolute top-0 w-full">
             <input type="range" id="max-price" min="0" max="200" value="150" class="price-range absolute top-0 w-full">
@@ -18,6 +33,7 @@
             <span id="max-value"></span>
         </div>
     </div>
+    <!-- Livres -->
     <div class="flex-1 w-fit h-fit flex gap-5 flex-wrap" id="books">
     </div>
 </div>
