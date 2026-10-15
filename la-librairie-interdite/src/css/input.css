@@ -62,3 +62,33 @@ body {
     background-attachment: fixed;
     min-height: 100vh;
 }
+
+.rarity.rarity-Peu-commun {
+    background-color: #22C55E30;
+    color: #22C55E;
+    border-color: #22C55E;
+}
+
+.rarity.rarity-Rare {
+    background-color: #3B82F630;
+    color: #3B82F6;
+    border-color: #3B82F6;
+}
+
+.rarity.rarity-Épique {
+    background-color: #A855F730;
+    color: #A855F7;
+    border-color: #A855F7;
+}
+
+.rarity.rarity-Légendaire {
+    background-color: #F59E0B30;
+    color: #F59E0B;
+    border-color: #F59E0B;
+}
+
+.rarity.rarity-Mythique {
+    background-color: #EF444430;
+    color: #EF4444;
+    border-color: #EF4444;
+}
