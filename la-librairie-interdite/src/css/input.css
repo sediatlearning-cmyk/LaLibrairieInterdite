@@ -63,16 +63,16 @@ body {
     min-height: 100vh;
 }
 
-.rarity.rarity-Peu-commun {
-    background-color: #22C55E30;
-    color: #22C55E;
-    border-color: #22C55E;
-}
-
-.rarity.rarity-Rare {
+.rarity.rarity-Commun {
     background-color: #3B82F630;
     color: #3B82F6;
     border-color: #3B82F6;
+}
+
+.rarity.rarity-Rare {
+    background-color: #22C55E30;
+    color: #22C55E;
+    border-color: #22C55E;
 }
 
 .rarity.rarity-Épique {
