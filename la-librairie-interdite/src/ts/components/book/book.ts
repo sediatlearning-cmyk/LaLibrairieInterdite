@@ -20,7 +20,6 @@ export async function book(book:BookModel): Promise<HTMLElement> {
     if(imageHolder) imageHolder.appendChild(bookimage);
     const bouttonBook = element.querySelector(".book-button")
     bouttonBook?.addEventListener('click', function() {
-        console.log("Je suis le livre "+ book.isbn +" et jai ete cliquer")
         changeRoute('singlebook', book)
     })
     return element;
