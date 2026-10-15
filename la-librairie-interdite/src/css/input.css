@@ -39,7 +39,7 @@ input[type="checkbox"]:checked {
     appearance: none;
     width: 16px;
     height: 16px;
-    background: #FFDFBE;
+    background: linear-gradient(135deg, #FFDFBE 0%, #E8BE91 50%, #C99660 100%);
     border-radius: 50%;
     cursor: pointer;
     pointer-events: auto;
@@ -48,7 +48,7 @@ input[type="checkbox"]:checked {
 .price-range::-moz-range-thumb {
     width: 16px;
     height: 16px;
-    background: #FFDFBE;
+    background: linear-gradient(135deg, #FFDFBE 0%, #E8BE91 50%, #C99660 100%);
     border-radius: 50%;
     cursor: pointer;
     pointer-events: auto;
