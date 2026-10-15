@@ -2,7 +2,7 @@ import { BookModel } from "../../models/Book-Model.js";
 import { addToCart, removeBookFromCart } from "../../services/CartService.js";
 import { ImageBook } from "../image-book/image-book.js";
 
-export async function bookCart(book:BookModel, quantity: number): Promise<HTMLElement> {
+export async function bookCart(update: () => Promise<void>,updatePriceTotal: () => Promise<void>, book:BookModel, quantity: number): Promise<HTMLElement> {
     const response = await fetch("/src/ts/components/book-cart/book-cart.html");
     if (!response.ok) throw new Error("Impossible de charger le header");
 
@@ -25,6 +25,7 @@ export async function bookCart(book:BookModel, quantity: number): Promise<HTMLEl
     function clampQuantityValue() {
         quantityInput.value = String(Math.max(1, Math.min(10, Number(quantityInput.value) || 1)));
         addToCart(book, Number(quantityInput.value));
+        updatePriceTotal()
     }
     quantityInput.addEventListener("change", () => {
         clampQuantityValue();
@@ -47,7 +48,8 @@ export async function bookCart(book:BookModel, quantity: number): Promise<HTMLEl
     const deleteButton = element.querySelector(".delete");
     deleteButton?.addEventListener("click", () => {
         removeBookFromCart(book);
-        element.innerHTML = ""
+        element.innerHTML = "";
+        update();
     })
     return element;
 }
