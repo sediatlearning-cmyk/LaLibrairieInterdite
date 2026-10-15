@@ -11,6 +11,10 @@
     --font-serif: "Inria Serif", serif;
 }
 
+input[type="checkbox"]:checked {
+  accent-color: #E9BB8A;
+}
+
 .delete-icon {
     mask: url("/src/assets/images/effacer.png") center / contain no-repeat;
     -webkit-mask: url("/src/assets/images/effacer.png") center / contain no-repeat;
