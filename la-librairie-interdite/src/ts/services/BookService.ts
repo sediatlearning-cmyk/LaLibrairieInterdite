@@ -12,3 +12,10 @@ export async function getAllRarities(): Promise<string[]> {
     const allBooks = await getBooks();
     return [...new Set(allBooks.map(book => book.rarity))];
 }
+
+export async function getMinimumMaxPrice(): Promise<number[]> {
+    const allBooks = await getBooks();
+    const min = Math.min(...allBooks.map(book => book.price));
+    const max = Math.max(...allBooks.map(book => book.price));
+    return [min,max]
+}
