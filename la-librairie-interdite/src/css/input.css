@@ -49,3 +49,12 @@
     cursor: pointer;
     pointer-events: auto;
 }
+
+body {
+    background-image: url("/src/assets/images/background.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    min-height: 100vh;
+}
