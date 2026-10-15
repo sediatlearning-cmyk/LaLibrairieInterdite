@@ -48,9 +48,35 @@ export async function SingleBook(params?: object): Promise<HTMLElement> {
     page.querySelector(".buttonBookImage")?.classList.add("selected")
     page.querySelector(".buttonOriginalImage")?.classList.remove("selected")
 
+    /* Quantity value */
+    const quantityInput = page.querySelector<HTMLInputElement>("#quantite")!;
+    const plusButton = page.querySelector(".plus-button");
+    const minusButton = page.querySelector(".minus-button");
+    function clampQuantityValue() {
+        quantityInput.value = String(Math.max(1, Math.min(10, Number(quantityInput.value) || 1)));
+    }
+    quantityInput.addEventListener("change", () => {
+        clampQuantityValue();
+    });
+
+
+    plusButton?.addEventListener("click", () => {
+        if (quantityInput) quantityInput.value = String(Number(quantityInput.value) + 1);
+        clampQuantityValue();
+    })
+
+
+    minusButton?.addEventListener("click", () => {
+        if (quantityInput) quantityInput.value = String(Number(quantityInput.value) - 1);
+        clampQuantityValue();
+    })
+
+    /* Cart Button */
     const addToCartButton = page.querySelector(".add-to-cart");
     addToCartButton?.addEventListener("click", () => {
-        addToCart(book, 1);
+        addToCart(book, Number(quantityInput.value));
     })
+
+
     return page;
 }
