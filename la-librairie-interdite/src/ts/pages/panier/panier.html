@@ -1,15 +1,34 @@
-<h1 class="text-4xl font-serif m-auto w-fit">Mon panier</h1>
-<h2 class="nombre-element-panier text-sm text-text-white m-auto w-fit">2 ouvrages dans le panier</h2>
-<div class="h-fit w-full" id="books">
 
-</div>
-<div class="flex h-20 items-center justify-center">
-  Total&nbsp;<span id="total" class="font-serif">0</span>&nbsp;€
-</div>
-<div>
-  <input
-    type="submit"
-    value="PROCEDER AU PAIEMENT"
-    class="font-serif h-10 px-4 flex items-center m-auto bg-orange-200 text-black text-center rounded-lg hover:bg-orange-300 hover:cursor-pointer"
-  />
-</div>
+<section class="mx-auto w-full max-w-6xl px-4 py-10 text-text-white sm:px-6">
+    <!-- En-tête -->
+    <div class="mb-10 text-center">
+        <p class="mb-2 text-sm tracking-[0.25em] text-[#D8A75B]">LA LIBRAIRIE INTERDITE</p>
+        <h1 class="font-serif text-4xl text-[#FFE2B5] sm:text-5xl">Mon panier</h1>
+        <div class="mx-auto my-5 h-px w-48 bg-linear-to-r from-transparent via-[#D8A75B] to-transparent"></div>
+        <h2 class="nombre-element-panier text-sm text-text-grey">2 ouvrages dans le panier</h2>
+    </div>
+
+    <!-- Liste des livres -->
+    <div id="books" class="flex w-full flex-col gap-4"></div>
+
+    <!-- Récapitulatif -->
+    <div class="mt-8 ml-auto w-full rounded-xl border border-[#9B7138]/60 bg-[#07111B]/95 p-6 shadow-xl sm:max-w-md">
+        <h3 class="mb-6 font-serif text-2xl text-[#FFE2B5]">Récapitulatif</h3>
+
+        <div class="mb-6 h-px bg-linear-to-r from-[#D8A75B]/60 to-transparent"></div>
+
+        <div class="mb-8 flex items-center justify-between">
+            <span class="text-lg text-text-grey">Total</span>
+            <p class="font-serif text-3xl text-[#FFE2B5]">
+                <span id="total">0</span> €
+            </p>
+        </div>
+
+        <input
+            type="submit"
+            value="PROCÉDER AU PAIEMENT"
+            class="h-12 w-full cursor-pointer rounded-lg border border-[#D8A75B] bg-[#D8A75B] px-4 font-serif font-bold text-[#07111B] transition-all duration-300 hover:bg-[#FFE2B5] hover:shadow-[0_0_20px_rgba(216,167,91,0.35)]"
+        />
+        <p class="mt-4 text-center text-xs text-text-grey">Votre commande sera confirmée avant validation.</p>
+    </div>
+</section>
